@@ -27,6 +27,10 @@ public class ChatDriver {
         System.out.println("\n---- Unsend Group Message ----");
         System.out.println("\nSend to Many:");
         nova.sendToMany(Arrays.asList("Echo", "Viz"), "Group hello!");
+        nova.showMessagesByUser(viz);
+        nova.showMessagesByUser(echo);
+
+        System.out.println();
         nova.undoLastMessage();
 
         System.out.println("Echo log: " + echo.getChatHistory().getLastMessage());
@@ -36,5 +40,6 @@ public class ChatDriver {
         System.out.println("\n---- User Chat Logs ----");
         echo.showMessagesByUser(nova);
         viz.showMessagesByUser(nova);
+        nova.showMessagesByUser(viz);
     }
 }
